@@ -1,0 +1,22 @@
+{
+  "name": "agenda_backend",
+  "version": "1.0.0",
+  "description": "Backend para la aplicacion de agenda telefonica",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../agenda && npm run build && @powershell Copy-Item dist -Recurse ../agenda_backend"
+  },
+  "author": "Andres",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
